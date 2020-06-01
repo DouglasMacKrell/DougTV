@@ -4,14 +4,13 @@ const db = require('../db')
 //GET 
 const getBroadcasterById = async (broadcasterId) => {
     const getQuery = `SELECT * FROM broadcasters WHERE socket_id = $1;`;
-    let broadcaster = await db.any(getQuery, [broadcasterId]);
+    let broadcaster = await db.one(getQuery, [broadcasterId]);
     return broadcaster
 }
 
 //GET
-const getAllBroadcastersByActive = async () => {
-    const getQuery = `SELECT * FROM broadcasters WHERE active = true;`;
-    let broadcasters = await db.any(getQuery)
+const getAllBroadcasters = async () => {
+    return await db.any(`SELECT * FROM broadcasters WHERE broadcaster_active = true;`)
 }
 
 //POST
@@ -30,19 +29,19 @@ const createBroadcaster = async (bodyObj) => {
 
 //PATCH
 const deactivateBroadcaster = async (broadcaster) => {
-    let { user_name, active } = broadcaster;
+    let { user_name, broadcaster_active } = broadcaster;
     try {
         let patchQuery = `UPDATE broadcasters SET `
         if (user_name) {
             patchQuery += `user_name = $/user_name/,`
         }
-        if (active) {
-            patchQuery += `active = $/active/,`
+        if (broadcaster_active) {
+            patchQuery += `broadcaster_active = $/broadcaster_active/,`
         }
 
         patchQuery = patchQuery.slice(0, patchQuery.length - 1);
 
-        patchQuery += ` WHERE id = $/id/ RETURNING *`
+        patchQuery += ` WHERE socket_id = $/socket_id/ RETURNING *`
         return await db.one(patchQuery, broadcaster);
     } catch (err) {
         throw (err);
@@ -52,7 +51,7 @@ const deactivateBroadcaster = async (broadcaster) => {
 /* EXPORT */
 module.exports = {
     getBroadcasterById,
-    getAllBroadcastersByActive,
+    getAllBroadcasters,
     createBroadcaster,
     deactivateBroadcaster
 }

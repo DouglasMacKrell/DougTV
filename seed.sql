@@ -6,7 +6,7 @@ CREATE TABLE broadcasters (
     id SERIAL PRIMARY KEY,
     socket_id VARCHAR,
     username VARCHAR,
-    active BOOLEAN DEFAULT TRUE
+    broadcaster_active BOOLEAN DEFAULT TRUE
 );
 
 -- SEED DATA

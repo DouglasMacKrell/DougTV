@@ -15,6 +15,14 @@ const server = http.createServer(app);
 // socket.io setup
 const io = require("socket.io")(server);
 
+var bodyParser = require('body-parser')
+
+// parse application/x-www-form-urlencoded
+app.use(bodyParser.urlencoded({ extended: false }))
+
+// parse application/json
+app.use(bodyParser.json())
+
 app.use(express.static(__dirname + "/public"));
 app.get('/', (request, response) => {
     response.json({ info: 'Node.js, Express, and Postgres API' })
