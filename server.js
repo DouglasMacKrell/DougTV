@@ -1,6 +1,9 @@
 const express = require("express");
 const app = express();
 
+var cors = require('cors')
+app.use(cors())
+
 // const indexRouter = require('./routes/index');
 const broadcastersRouter = require('./routes/broadcast');
 
@@ -63,6 +66,10 @@ io.sockets.on("connection", socket => {
     //     socket.to(broadcaster).emit("disconnectPeer", socket.id);
     //     console.log("disconnected")
     // });
+    socket.on('new-broadcaster', (broadcaster) => {
+        socket.broadcast.emit('active-broadcaster', broadcaster)
+        console.log("active-broadcaster emitted")
+    })
     socket.on('new message', data => {
         console.log(data.room);
         socket.broadcast
