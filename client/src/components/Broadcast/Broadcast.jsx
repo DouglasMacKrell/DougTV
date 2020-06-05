@@ -7,11 +7,11 @@ import useUserMedia from '../useUserMedia/useUserMedia'
 const Broadcast = () => {
     const [broadcaster, setBroadcaster] = useState('');
     const [name, setName] = useState('');
-    const [peerConnections, setPeerConnections] = useState({})
+    const [peerConnections, setPeerConnections] = useState({});
     const [constraints, setConstraints] = useState({
         audio: true,
         video: { facingMode: "user" }
-    })
+    });
 
     const config = {
         iceServers: [
@@ -31,31 +31,14 @@ const Broadcast = () => {
         videoRef.current.srcObject = mediaStream;
     }
 
-    console.log("videoRef =", videoRef)
+    console.log("videoRef =", videoRef);
 
     useEffect(() => {
         socket.on("broadcaster", id => {
             setBroadcaster(id)
             console.log("broadcaster id:", broadcaster);
         })
-    }, [socket])
-
-    // useEffect(() => {
-    //     socket.on('broadcaster', id => {
-    //         setBroadcaster(id);
-    //         if (!videoEl) {
-    //             return
-    //         }
-    //         navigator.mediaDevices.getUserMedia(constraints)
-    //             .then(stream => {
-    //                 let video = videoEl.current
-    //                 video.srcObject = stream
-    //                 // setVideoEl(stream)
-    //             })
-    //     })
-    //     console.log(broadcaster)
-    //     console.log("first set videoEl", videoEl)
-    // }, [videoEl])
+    }, [socket]);
 
     useEffect(() => {
         socket.on("watcher", id => {
@@ -81,7 +64,7 @@ const Broadcast = () => {
                     socket.emit("offer", id, peerConnection.localDescription);
                 });
         });
-    }, [socket])
+    }, [socket]);
 
     useEffect(() => {
         socket.on("answer", (id, description) => {
@@ -93,7 +76,7 @@ const Broadcast = () => {
         socket.on("candidate", (id, candidate) => {
             peerConnections[id].addIceCandidate(new RTCIceCandidate(candidate));
         });
-    }, [socket])
+    }, [socket]);
 
     useEffect(() => {
         // closes connection when client disconnects
@@ -105,16 +88,16 @@ const Broadcast = () => {
         window.onunload = window.onbeforeunload = () => {
             socket.close();
         };
-    }, [socket, window])
+    }, [socket, window]);
 
     const handleCanPlay = () => {
         videoRef.current.play();
-    }
+    };
 
     const handleNewBroadcaster = () => {
         console.log("broadcaster emitted")
         socket.emit('broadcaster', socket.id)
-    }
+    };
 
     const launchBroadcast = async () => {
         try {
@@ -126,9 +109,9 @@ const Broadcast = () => {
             console.log(broadcasterData)
             return broadcasterData
         } catch (error) {
-            console.log('err:', error)
+            console.log('err:', error);
         }
-    }
+    };
 
     const disconnectBroadcaster = async () => {
         try {
@@ -141,7 +124,7 @@ const Broadcast = () => {
         } catch (error) {
             console.log('err:', error)
         }
-    }
+    };
 
     return (
         <div>

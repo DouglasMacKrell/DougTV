@@ -6,9 +6,6 @@ const Watch = () => {
     let { broadcasterId } = useParams();
     console.log(broadcasterId)
 
-    // const [peerConnection, setPeerConnection] = useState("");
-    // const [videoEl, setVideoEl] = useState(useRef(null))
-
     const config = {
         iceServers: [
             {
@@ -20,7 +17,6 @@ const Watch = () => {
     const ENDPOINT = 'http://localhost:4004';
     const [socket] = useSocket(ENDPOINT);
 
-    // const video = document.querySelector("video");
     let peerConnection
     const videoRef = useRef();
 
@@ -58,18 +54,6 @@ const Watch = () => {
         });
     }, [socket])
 
-    // useEffect(() => {
-    //     socket.on("connect", () => {
-    //         socket.emit("watcher");
-    //     });
-    // }, [socket])
-
-    // useEffect(() => {
-    //     socket.on("broadcaster", () => {
-    //         socket.emit("watcher", broadcasterId);
-    //     });
-    // }, [socket])
-
     useEffect(() => {
         socket.on("Peer", () => {
             peerConnection.close();
@@ -82,7 +66,6 @@ const Watch = () => {
     const handleWatcher = () => {
         socket.emit("watcher", broadcasterId);
     }
-
 
     return (
         <div>
