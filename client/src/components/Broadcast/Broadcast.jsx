@@ -21,7 +21,7 @@ const Broadcast = () => {
         ]
     };
 
-    const ENDPOINT = 'http://localhost:4004';
+    const ENDPOINT = window.location.hostname;
     const [socket] = useSocket(ENDPOINT);
 
     const videoRef = useRef();
@@ -95,13 +95,13 @@ const Broadcast = () => {
     };
 
     const handleNewBroadcaster = () => {
-        console.log("broadcaster emitted")
         socket.emit('broadcaster', socket.id)
+        console.log("broadcaster emitted", socket.id)
     };
 
     const launchBroadcast = async () => {
         try {
-            let response = await axios.post(`http://localhost:4004/api/broadcasters/new/${broadcaster}`, {
+            let response = await axios.post(`/api/broadcasters/new/${broadcaster}`, {
                 username: name
             })
             let broadcasterData = response.data.payload
@@ -115,7 +115,7 @@ const Broadcast = () => {
 
     const disconnectBroadcaster = async () => {
         try {
-            let offTheAir = await axios.patch(`http://localhost:4004/api/broadcasters/${broadcaster}`, {
+            let offTheAir = await axios.patch(`/api/broadcasters/${broadcaster}`, {
                 broadcaster_active: "false"
             })
             socket.emit('stop-broadcaster')

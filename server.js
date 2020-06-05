@@ -10,13 +10,13 @@ const broadcastersRouter = require('./routes/broadcast');
 // variable to hold the broadcaster's socket id
 // let broadcaster;
 
-const port = 4004;
+const port = Number(process.env.PORT) || 4004;
 
 const http = require("http");
 const server = http.createServer(app);
 
 // socket.io setup
-const io = require("socket.io")(server);
+const io = require("socket.io")(server, { origins: '*:*'});
 
 var bodyParser = require('body-parser')
 

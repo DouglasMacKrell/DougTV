@@ -14,7 +14,7 @@ const Watch = () => {
         ]
     };
 
-    const ENDPOINT = 'http://localhost:4004';
+    const ENDPOINT = window.location.hostname;
     const [socket] = useSocket(ENDPOINT);
 
     let peerConnection
@@ -69,7 +69,7 @@ const Watch = () => {
 
     return (
         <div>
-            Watch page
+            <h1>Watch page</h1>
             <video className="video" autoPlay={true} ref={videoRef} />
             <button onClick={() => handleWatcher()}>Connect</button>
         </div>
