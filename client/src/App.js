@@ -11,7 +11,7 @@ const App = () => {
     <Router>
       <Route path="/" exact component={Join} />
       <Route path="/broadcast" component={Broadcast} />
-      <Route path="/watch" component={Watch} />
+      <Route path="/watch/:broadcasterId" component={Watch} />
     </Router>
   );
 }
