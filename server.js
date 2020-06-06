@@ -20,13 +20,21 @@ const io = require("socket.io")(server, { origins: '*:*'});
 
 var bodyParser = require('body-parser')
 
-// parse application/x-www-form-urlencoded
-app.use(bodyParser.urlencoded({ extended: false }))
-
 // parse application/json
 app.use(bodyParser.json())
 
-app.use(express.static(__dirname + "/public"));
+// parse application/x-www-form-urlencoded
+app.use(bodyParser.urlencoded({ extended: false }))
+
+app.use(cookieParser());
+
+
+app.use(express.static(__dirname + "client/build"));
+
+app.get("*", (req, res) => {
+    res.sendFile(path.join(__dirname + "/client/build/index.html"));
+  });
+
 app.get('/', (request, response) => {
     response.json({ info: 'Node.js, Express, and Postgres API' })
 })
