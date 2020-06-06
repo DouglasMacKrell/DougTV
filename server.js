@@ -32,7 +32,7 @@ app.use(cookieParser());
 
 app.use(express.static(__dirname + "client/build"));
 
-app.get('/', (request, response) => {
+app.get('/api', (request, response) => {
     response.json({ info: 'Node.js, Express, and Postgres API' })
 })
 app.use('/api/broadcasters', broadcastersRouter);
