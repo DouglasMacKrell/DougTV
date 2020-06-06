@@ -84,6 +84,7 @@ const Broadcast = () => {
     useEffect(() => {
         // closes connection when client disconnects
         socket.on("disconnectPeer", id => {
+            setNumberOfViewers(numberOfViewers - 1);
             peerConnections[id].close();
             delete peerConnections[id];
         });
