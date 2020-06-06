@@ -2,6 +2,7 @@ const express = require("express");
 const app = express();
 const cookieParser = require('cookie-parser');
 const path = require('path');
+const logger = require('morgan');
 
 var cors = require('cors')
 app.use(cors())
@@ -29,6 +30,7 @@ app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: false }))
 
 app.use(cookieParser());
+app.use(logger('dev'));
 
 app.use(express.static(__dirname + "client/build"));
 
