@@ -7,7 +7,7 @@ import LinksContainer from '../LinksContainer/LinksContainer'
 const Join = () => {
     const [broadcasters, setBroadcasters] = useState([])
 
-    const ENDPOINT = window.location.hostname;
+    const ENDPOINT = "https://dougtv.herokuapp.com/";
     const [socket] = useSocket(ENDPOINT);
 
     useEffect(() => {
