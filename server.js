@@ -32,7 +32,7 @@ app.use(bodyParser.urlencoded({ extended: false }))
 app.use(cookieParser());
 app.use(logger('dev'));
 
-app.use(express.static(__dirname + "client/build"));
+app.use(express.static(__dirname + "/client/build"));
 
 app.get('/api', (request, response) => {
     response.json({ info: 'Node.js, Express, and Postgres API' })
