@@ -136,7 +136,7 @@ const Broadcast = () => {
             <button onClick={() => handleNewBroadcaster()}>Connect</button>
             <button onClick={(e) => (!name) ? e.preventDefault : launchBroadcast()}>Start Broadcast</button>
             <button onClick={() => disconnectBroadcaster()}>Disconnect</button>
-            <p>To start a stream, first click CONNECT to connect to the server, your livestream broadcast won't be publicly listed until you click the START BROADCAST button. When you're done, click DISCONNECT to remove your stream from public view and then close your tab to close your camera!</p>
+            <p>To start a stream, first click CONNECT to connect to the server. Don't worry, your livestream broadcast won't be publicly listed until you click the START BROADCAST button! When you're done with your broadcast, click DISCONNECT to remove your stream from public view and then close your tab to close your camera!</p>
         </div>
     )
 }
