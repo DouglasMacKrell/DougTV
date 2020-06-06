@@ -33,12 +33,12 @@ app.use(cookieParser());
 app.use(express.static(__dirname + "client/build"));
 
 app.get("*", (req, res) => {
-    res.sendFile(path.join(__dirname + "./client/build/index.html"));
+    res.sendFile(path.join(__dirname + "/client/build/index.html"));
 });
 
-// app.get('/', (request, response) => {
-//     response.json({ info: 'Node.js, Express, and Postgres API' })
-// })
+app.get('/', (request, response) => {
+    response.json({ info: 'Node.js, Express, and Postgres API' })
+})
 app.use('/api/broadcasters', broadcastersRouter);
 
 io.sockets.on("error", e => console.log(e));
