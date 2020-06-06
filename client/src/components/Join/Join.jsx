@@ -37,6 +37,7 @@ const Join = () => {
         <div className="Join-OuterContainer">
             <div className="Join-InnerContainer">
                 <h1 className="heading">Join A Stream or Start Your Own!</h1>
+                <h3>Available livestreams are listed below!</h3>
                 <Link to={`/broadcast`}>
                     <button className={'button mt-20'} type="submit">Start Broadcasting</button>
                 </Link>

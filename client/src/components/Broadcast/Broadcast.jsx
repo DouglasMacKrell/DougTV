@@ -131,11 +131,12 @@ const Broadcast = () => {
             <h1>Smile! You're on camera!</h1>
             <video className="video" autoPlay={true} muted ref={videoRef} onCanPlay={handleCanPlay} playsInline muted />
             <div>
-                <input placeholder="Name" className="joinInput" type="text" onChange={(event) => setName(event.target.value)} />
+                <input placeholder="Enter your username" className="joinInput" type="text" onChange={(event) => setName(event.target.value)} />
             </div>
             <button onClick={() => handleNewBroadcaster()}>Connect</button>
             <button onClick={(e) => (!name) ? e.preventDefault : launchBroadcast()}>Start Broadcast</button>
             <button onClick={() => disconnectBroadcaster()}>Disconnect</button>
+            <p>To start a stream, first click CONNECT to connect to the server, your livestream broadcast won't be publicly listed until you click the START BROADCAST button. When you're done, click DISCONNECT to remove your stream from public view and then close your tab to close your camera!</p>
         </div>
     )
 }
