@@ -8,6 +8,7 @@ const Broadcast = () => {
     const [broadcaster, setBroadcaster] = useState('');
     const [name, setName] = useState('');
     const [peerConnections, setPeerConnections] = useState({});
+    const [numberOfViewers, setNumberOfViewers] = useState(0)
     const [constraints, setConstraints] = useState({
         audio: true,
         video: { facingMode: "user" }
@@ -74,6 +75,8 @@ const Broadcast = () => {
 
     useEffect(() => {
         socket.on("candidate", (id, candidate) => {
+            let updatedViewersNum = numberOfViewers + 1
+            setNumberOfViewers(updatedViewersNum)
             peerConnections[id].addIceCandidate(new RTCIceCandidate(candidate));
         });
     }, [socket]);
@@ -136,8 +139,9 @@ const Broadcast = () => {
             <button onClick={() => handleNewBroadcaster()}>Connect</button>
             <button onClick={(e) => (!name) ? e.preventDefault : launchBroadcast()}>Start Broadcast</button>
             <button onClick={() => disconnectBroadcaster()}>Disconnect</button>
-            <p>To start a stream, first enter a publicly visible USERNAME and click CONNECT to connect to the server.</p> 
-            <p>Don't worry, your livestream broadcast won't be accessible until you click the START BROADCAST button!</p> 
+            <h3>Viewers {numberOfViewers}</h3>
+            <p>To start a stream, first enter a publicly visible USERNAME and click CONNECT to connect to the server.</p>
+            <p>Don't worry, your livestream broadcast won't be accessible until you click the START BROADCAST button!</p>
             <p>When you're done with your broadcast, click DISCONNECT to remove your stream from public view and then close your tab to close your camera!</p>
         </div>
     )
