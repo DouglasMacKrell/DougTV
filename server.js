@@ -40,7 +40,7 @@ app.get('/api', (request, response) => {
 app.use('/api/broadcasters', broadcastersRouter);
 
 app.get("*", (req, res) => {
-    res.sendFile(path.join(__dirname + "/client/build/index.html"));
+    res.sendFile(path.join(__dirname + "/client/build", "index.html"));
 });
 
 io.sockets.on("error", e => console.log(e));
