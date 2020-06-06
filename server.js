@@ -17,7 +17,7 @@ const http = require("http");
 const server = http.createServer(app);
 
 // socket.io setup
-const io = require("socket.io")(server, { origins: '*:*'});
+const io = require("socket.io")(server, { origins: '*:*' });
 
 var bodyParser = require('body-parser')
 
@@ -34,11 +34,11 @@ app.use(express.static(__dirname + "client/build"));
 
 app.get("*", (req, res) => {
     res.sendFile(path.join(__dirname + "/client/build/index.html"));
-  });
+});
 
-app.get('/', (request, response) => {
-    response.json({ info: 'Node.js, Express, and Postgres API' })
-})
+// app.get('/', (request, response) => {
+//     response.json({ info: 'Node.js, Express, and Postgres API' })
+// })
 app.use('/api/broadcasters', broadcastersRouter);
 
 io.sockets.on("error", e => console.log(e));
