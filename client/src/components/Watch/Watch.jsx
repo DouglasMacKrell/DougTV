@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from "react";
 import { useParams } from "react-router-dom";
 import useSocket from "use-socket.io-client";
 
-import './Watch.css'
+import "./Watch.css";
 
 const Watch = () => {
   let { broadcasterId } = useParams();
@@ -68,8 +68,10 @@ const Watch = () => {
       <div className="watch__sub-container">
         <h1 className="watch__header">Watch page</h1>
         <video className="video" autoPlay={true} ref={videoRef} />
-        <button className="watch__button" onClick={() => handleWatcher()}>Connect</button>
       </div>
+      <button className="watch__button" onClick={() => handleWatcher()}>
+        Connect
+      </button>
     </div>
   );
 };
