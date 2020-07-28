@@ -2,6 +2,8 @@ import React, { useEffect, useState, useRef } from "react";
 import useSocket from "use-socket.io-client";
 import axios from "axios";
 
+import './Broadcast.css'
+
 import useUserMedia from "../useUserMedia/useUserMedia";
 
 const Broadcast = () => {
