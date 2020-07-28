@@ -32,8 +32,6 @@ const Broadcast = () => {
     videoRef.current.srcObject = mediaStream;
   }
 
-  console.log("videoRef =", videoRef);
-
   useEffect(() => {
     socket.on("broadcaster", (id) => {
       setBroadcaster(id);
@@ -125,8 +123,8 @@ const Broadcast = () => {
   };
 
   return (
-    <div>
-      <h1>Smile! You're on camera!</h1>
+    <div className="broadcast__main-container">
+      <h1 className="broadcast__header">Smile! You're on camera!</h1>
       <video
         className="video"
         autoPlay={true}
@@ -144,12 +142,25 @@ const Broadcast = () => {
           onChange={(event) => setName(event.target.value)}
         />
       </div>
-      <button onClick={() => handleNewBroadcaster()}>Connect</button>
-      <button onClick={(e) => (!name ? e.preventDefault : launchBroadcast())}>
+      <button
+        className="broadcast__button"
+        onClick={() => handleNewBroadcaster()}
+      >
+        Connect
+      </button>
+      <button
+        className="broadcast__button"
+        onClick={(e) => (!name ? e.preventDefault : launchBroadcast())}
+      >
         Start Broadcast
       </button>
-      <button onClick={() => disconnectBroadcaster()}>Disconnect</button>
-      <h3>Viewers {numberOfViewers}</h3>
+      <button
+        className="broadcast__button"
+        onClick={() => disconnectBroadcaster()}
+      >
+        Disconnect
+      </button>
+      <h3>Viewers: {numberOfViewers}</h3>
       <p>
         To start a stream, first enter a publicly visible USERNAME and click
         CONNECT to connect to the server.

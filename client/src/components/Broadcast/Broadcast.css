@@ -1,0 +1,13 @@
+.broadcast__main-container {
+  text-align: center;
+  background-color: skyblue;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.broadcast__header {
+  font-family: "Rock Salt", cursive;
+}
