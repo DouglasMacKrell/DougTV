@@ -27,8 +27,8 @@ body {
 }
 
 .watch__sub-container {
-  padding: 10px;
-  padding-bottom: 25px;
+  display: flex;
+  flex-direction: column;
 }
 
 .watch__header {
