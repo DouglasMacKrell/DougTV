@@ -62,10 +62,12 @@ const Watch = () => {
   };
 
   return (
-    <div>
-      <h1>Watch page</h1>
-      <video className="video" autoPlay={true} ref={videoRef} />
-      <button onClick={() => handleWatcher()}>Connect</button>
+    <div className="watch__main-container">
+      <div className="watch__sub-container">
+        <h1 className="watch__header">Watch page</h1>
+        <video className="video" autoPlay={true} ref={videoRef} />
+        <button className="watch__button" onClick={() => handleWatcher()}>Connect</button>
+      </div>
     </div>
   );
 };

@@ -1,0 +1,66 @@
+html {
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.watch__main-container {
+  text-align: center;
+  background-color: skyblue;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.watch__sub-container {
+  padding: 10px;
+  padding-bottom: 25px;
+}
+
+.watch__header {
+  font-family: "Rock Salt", cursive;
+}
+
+.watch__button {
+  font-size: 1.5rem;
+  background-color: purple;
+  color: white;
+  padding: 12px;
+  margin: 15px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 7px rgba(0, 0, 0, 0.5);
+}
+
+.watch__button:hover {
+  font-size: 1.5rem;
+  background-color: orange;
+  color: black;
+  padding: 12px;
+  margin: 15;
+  border-radius: 10px;
+  box-shadow: 2px 2px 7px rgba(0, 0, 0, 0.5);
+}
+
+.watch__button:active {
+  font-size: 1.5rem;
+  background-color: rgba(255, 166, 0, 0.726);
+  color: black;
+  padding: 9px;
+  margin: 15px;
+  border-radius: 10px;
+  box-shadow: 1px 1px 7px rgba(0, 0, 0, 0.5);
+}
+
+.watch__button:focus {
+    outline: none;
+}
