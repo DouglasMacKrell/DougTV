@@ -35,12 +35,13 @@ body {
   background-color: purple;
   color: white;
   padding: 12px;
+  margin: 15px;
   border-radius: 10px;
   box-shadow: 2px 2px 7px rgba(0, 0, 0, 0.5);
 }
 
 .join__button:hover {
-  font-size: 1rem;
+  font-size: 1.5rem;
   background-color: orange;
   color: black;
   padding: 12px;
@@ -50,7 +51,7 @@ body {
 }
 
 .join__button:active {
-  font-size: 1rem;
+  font-size: 1.5rem;
   background-color: rgba(255, 166, 0, 0.726);
   color: black;
   padding: 9px;
