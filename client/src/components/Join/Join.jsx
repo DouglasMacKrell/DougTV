@@ -4,6 +4,8 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 import LinksContainer from "../LinksContainer/LinksContainer";
 
+import './Join.css'
+
 const Join = () => {
   const [broadcasters, setBroadcasters] = useState([]);
 
