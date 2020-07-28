@@ -1,7 +1,18 @@
 .Join-OuterContainer {
-    text-align: center;
-    background-color: skyblue;
-    height: 100vh;
-    top: 0;
-    left: 0;
+  text-align: center;
+  background-color: skyblue;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.join__button {
+  font-size: 1.5rem;
+  background-color: purple;
+  color: white;
+  padding: 12px;
+  border-radius: 10px;
+  box-shadow: 2px 1px 7px rgba(0, 0, 0, 0.5);
 }

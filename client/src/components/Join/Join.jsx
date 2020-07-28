@@ -30,16 +30,16 @@ const Join = () => {
   }, []);
 
   return (
-    <div className="Join-OuterContainer">
-      <div className="Join-InnerContainer">
-        <h1 className="heading">Join A Stream or Start Your Own!</h1>
+    <div className="join__outer-container">
+      <div className="join__inner-container">
+        <h1 className="join__heading">Join A Stream or Start Your Own!</h1>
         <h3>Available livestreams are listed below!</h3>
         <Link to={`/broadcast`}>
-          <button className={"button mt-20"} type="submit">
+          <button className={"join__button mt-20"} type="submit">
             Start Broadcasting
           </button>
         </Link>
-        <div>
+        <div className="join__links-container">
           <LinksContainer broadcasters={broadcasters} />
         </div>
       </div>
