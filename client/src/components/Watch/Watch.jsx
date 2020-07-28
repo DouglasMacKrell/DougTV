@@ -2,6 +2,8 @@ import React, { useEffect, useRef } from "react";
 import { useParams } from "react-router-dom";
 import useSocket from "use-socket.io-client";
 
+import './Watch.css'
+
 const Watch = () => {
   let { broadcasterId } = useParams();
 
