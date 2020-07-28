@@ -52,3 +52,27 @@ body {
   border-radius: 10px;
   box-shadow: 2px 2px 7px rgba(0, 0, 0, 0.5);
 }
+
+.broadcast__button:hover {
+  font-size: 1rem;
+  background-color: orange;
+  color: black;
+  padding: 12px;
+  margin: 15;
+  border-radius: 10px;
+  box-shadow: 2px 2px 7px rgba(0, 0, 0, 0.5);
+}
+
+.broadcast__button:active {
+  font-size: 1rem;
+  background-color: rgba(255, 166, 0, 0.726);
+  color: black;
+  padding: 9px;
+  margin: 15px;
+  border-radius: 10px;
+  box-shadow: 1px 1px 7px rgba(0, 0, 0, 0.5);
+}
+
+.broadcast__button:focus {
+    outline: none;
+}
