@@ -15,11 +15,17 @@ body {
 .join__outer-container {
   text-align: center;
   background-color: skyblue;
-  height: 100vh;
+  height: 100%;
+    background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
   top: 0;
   left: 0;
   margin: 0;
   padding: 0;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .join__inner-container {
