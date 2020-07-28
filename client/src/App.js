@@ -6,6 +6,8 @@ import Join from "./components/Join/Join";
 import Broadcast from "./components/Broadcast/Broadcast";
 import Watch from "./components/Watch/Watch";
 
+import '.App.css'
+
 const App = () => {
   return (
     <Router>
