@@ -2,7 +2,7 @@ import React, { useEffect, useState, useRef } from "react";
 import useSocket from "use-socket.io-client";
 import axios from "axios";
 
-import './Broadcast.css'
+import "./Broadcast.css";
 
 import useUserMedia from "../useUserMedia/useUserMedia";
 
@@ -126,59 +126,61 @@ const Broadcast = () => {
 
   return (
     <div className="broadcast__main-container">
-      <h1 className="broadcast__header">Smile! You're on camera!</h1>
-      <video
-        className="video"
-        autoPlay={true}
-        muted
-        ref={videoRef}
-        onCanPlay={handleCanPlay}
-        playsInline
-        muted
-      />
-      <div>
-        <input
-          placeholder="Enter your username"
-          className="joinInput"
-          type="text"
-          onChange={(event) => setName(event.target.value)}
+      <div className="broadcast__sub-container">
+        <h1 className="broadcast__header">Smile! You're on camera!</h1>
+        <video
+          className="video"
+          autoPlay={true}
+          muted
+          ref={videoRef}
+          onCanPlay={handleCanPlay}
+          playsInline
+          muted
         />
+        <div>
+          <input
+            placeholder="Enter your username"
+            className="joinInput"
+            type="text"
+            onChange={(event) => setName(event.target.value)}
+          />
+        </div>
+        <button
+          className="broadcast__button"
+          onClick={() => handleNewBroadcaster()}
+        >
+          Connect
+        </button>
+        <button
+          className="broadcast__button"
+          onClick={(e) => (!name ? e.preventDefault : launchBroadcast())}
+        >
+          Start Broadcast
+        </button>
+        <button
+          className="broadcast__button"
+          onClick={() => disconnectBroadcaster()}
+        >
+          Disconnect
+        </button>
+        <h3>Viewers: {numberOfViewers}</h3>
+        <p>
+          To start a stream, first enter a publicly visible USERNAME and click
+          CONNECT to connect to the server.
+        </p>
+        <p>
+          Don't worry, your livestream broadcast won't be accessible until you
+          click the START BROADCAST button!
+        </p>
+        <p>
+          When you're done with your broadcast, click DISCONNECT to delete and
+          remove your stream from public view!
+        </p>
+        <p>
+          Finally, close your tab! This will automatically close and disconnect
+          your camera and microphone.
+        </p>
       </div>
-      <button
-        className="broadcast__button"
-        onClick={() => handleNewBroadcaster()}
-      >
-        Connect
-      </button>
-      <button
-        className="broadcast__button"
-        onClick={(e) => (!name ? e.preventDefault : launchBroadcast())}
-      >
-        Start Broadcast
-      </button>
-      <button
-        className="broadcast__button"
-        onClick={() => disconnectBroadcaster()}
-      >
-        Disconnect
-      </button>
-      <h3>Viewers: {numberOfViewers}</h3>
-      <p>
-        To start a stream, first enter a publicly visible USERNAME and click
-        CONNECT to connect to the server.
-      </p>
-      <p>
-        Don't worry, your livestream broadcast won't be accessible until you
-        click the START BROADCAST button!
-      </p>
-      <p>
-        When you're done with your broadcast, click DISCONNECT to delete and
-        remove your stream from public view!
-      </p>
-      <p>
-        Finally, close your tab! This will automatically close and disconnect
-        your camera and microphone.
-      </p>
     </div>
   );
 };
