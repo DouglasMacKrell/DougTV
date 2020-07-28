@@ -9,5 +9,16 @@
 }
 
 .broadcast__header {
+  padding-top: 10%;
   font-family: "Rock Salt", cursive;
+}
+
+.broadcast__button {
+  font-size: 1.5rem;
+  background-color: purple;
+  color: white;
+  padding: 12px;
+  margin: 15px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 7px rgba(0, 0, 0, 0.5);
 }
