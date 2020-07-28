@@ -1,3 +1,17 @@
+html {
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+}
+
 .join__outer-container {
   text-align: center;
   background-color: skyblue;
@@ -6,6 +20,10 @@
   left: 0;
   margin: 0;
   padding: 0;
+}
+
+.join__inner-container {
+  margin-top: 15%;
 }
 
 .join__header {
