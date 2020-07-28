@@ -137,7 +137,7 @@ const Broadcast = () => {
           playsInline
           muted
         />
-        <div>
+        <div className="name-input">
           <input
             placeholder="Enter your username"
             className="joinInput"

@@ -31,6 +31,17 @@ body {
   font-family: "Rock Salt", cursive;
 }
 
+.video {
+    border: 10px purple solid;
+    border-radius: 10px;
+}
+
+.name-input input {
+    width: 100px;
+    height: 25px;
+    font-size: 1rem;
+}
+
 .broadcast__button {
   font-size: 1.5rem;
   background-color: purple;
