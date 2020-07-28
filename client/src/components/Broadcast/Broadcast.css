@@ -1,7 +1,7 @@
 .broadcast__main-container {
   text-align: center;
   background-color: skyblue;
-  height: 100vh;
+  min-height: 100%;
   top: 0;
   left: 0;
   margin: 0;
@@ -9,7 +9,6 @@
 }
 
 .broadcast__header {
-  padding-top: 10%;
   font-family: "Rock Salt", cursive;
 }
 
