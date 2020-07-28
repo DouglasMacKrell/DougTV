@@ -1,4 +1,4 @@
-
+DROP TABLE IF exists broadcasters; 
 CREATE TABLE broadcasters (
     id SERIAL PRIMARY KEY,
     socket_id VARCHAR,

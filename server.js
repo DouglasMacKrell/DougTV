@@ -45,7 +45,6 @@ app.get("*", (req, res) => {
 
 io.sockets.on("error", e => console.log(e));
 
-// Implement the connection for the clients and broadcaster to the server.
 io.sockets.on("connection", socket => {
     socket.on("broadcaster", id => {
         broadcaster = id;
@@ -57,9 +56,6 @@ io.sockets.on("connection", socket => {
         console.log("watcher set", socket.id)
         console.log("broadcasterId", broadcasterId)
     });
-    // // Code below implements the socket.io events to initialize a WebRTC connection. 
-    // // These events will be used by the watchers and broadcaster to 
-    // // instantiate a peer-to-peer connection.
     socket.on("offer", (id, message) => {
         socket.to(id).emit("offer", socket.id, message);
         console.log("offer sent", message)
@@ -72,12 +68,6 @@ io.sockets.on("connection", socket => {
         socket.to(id).emit("candidate", socket.id, message);
         console.log("candidate", message)
     });
-
-    // closes connection when client disconnects
-    // socket.on("disconnect", (broadcasterId) => {
-    //     socket.to(broadcasterId).emit("disconnectPeer", socket.id);
-    //     console.log("disconnected")
-    // });
 
     socket.on('new-broadcaster', (broadcaster) => {
         socket.broadcast.emit('active-broadcaster', broadcaster)
