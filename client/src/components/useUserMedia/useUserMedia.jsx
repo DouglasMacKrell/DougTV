@@ -1,33 +1,32 @@
-import { useState, useEffect } from "react"
-// import useSocket from 'use-socket.io-client';
+import { useState, useEffect } from "react";
 
-
-const useUserMedia = requestedMedia => {
+const useUserMedia = (requestedMedia) => {
   const [mediaStream, setMediaStream] = useState(null);
 
-  // initialize streams
   useEffect(() => {
     const enableStream = async () => {
       try {
-        const stream = await navigator.mediaDevices.getUserMedia(requestedMedia);
+        const stream = await navigator.mediaDevices.getUserMedia(
+          requestedMedia
+        );
         setMediaStream(stream);
-      } catch(err) {
-        console.log(err)
+      } catch (err) {
+        console.log(err);
       }
-    }
+    };
 
     if (!mediaStream) {
       enableStream();
     } else {
       return function cleanup() {
-        mediaStream.getTracks().forEach(track => {
+        mediaStream.getTracks().forEach((track) => {
           track.stop();
         });
-      }
+      };
     }
   }, [mediaStream, requestedMedia]);
 
   return mediaStream;
-}
+};
 
-export default useUserMedia
+export default useUserMedia;
