@@ -26,6 +26,11 @@ body {
   padding-top: 10%;
 }
 
+.site-logo {
+    width: 40%;
+    padding-bottom: 15px;
+}
+
 .join__header {
   font-family: "Rock Salt", cursive;
 }

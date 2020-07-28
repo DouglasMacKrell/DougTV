@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 import LinksContainer from "../LinksContainer/LinksContainer";
 
+import Logo from './DougTV-Logo.svg'
 import './Join.css'
 
 const Join = () => {
@@ -32,6 +33,7 @@ const Join = () => {
   return (
     <div className="join__outer-container">
       <div className="join__inner-container">
+          <img src={Logo} alt="Doug TV" className="site-logo" />
         <h1 className="join__header">Join A Stream or Start Your Own!</h1>
         <h3>Available livestreams are listed below!</h3>
         <Link to={`/broadcast`}>
