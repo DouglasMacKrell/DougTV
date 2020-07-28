@@ -61,5 +61,16 @@ body {
 }
 
 .join__button:focus {
-    outline: none;
+  outline: none;
+}
+
+.join__links-container ul {
+  list-style: none;
+  padding: 0;
+}
+
+.join__links-container li {
+    padding-bottom: 10px;
+    font-size: 20px;
+    font-weight: bold;
 }
