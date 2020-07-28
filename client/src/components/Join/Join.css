@@ -26,6 +26,8 @@ body {
   padding: 0;
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
 }
 
 .join__inner-container {
@@ -34,7 +36,6 @@ body {
 
 .site-logo {
     width: 40%;
-    padding: 25px;
 }
 
 .join__header {
