@@ -1,5 +1,7 @@
 .Join-OuterContainer {
     text-align: center;
     background-color: skyblue;
-    min-height: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
 }
