@@ -32,7 +32,7 @@ const Join = () => {
   return (
     <div className="join__outer-container">
       <div className="join__inner-container">
-        <h1 className="join__heading">Join A Stream or Start Your Own!</h1>
+        <h1 className="join__header">Join A Stream or Start Your Own!</h1>
         <h3>Available livestreams are listed below!</h3>
         <Link to={`/broadcast`}>
           <button className={"join__button mt-20"} type="submit">
