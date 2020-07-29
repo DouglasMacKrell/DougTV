@@ -11,6 +11,7 @@ const Broadcast = () => {
   const [name, setName] = useState("");
   const [peerConnections, setPeerConnections] = useState({});
   const [numberOfViewers, setNumberOfViewers] = useState(0);
+  const [broadcastLaunched, setBroadcastLaunched] = useState(false);
   const [constraints, setConstraints] = useState({
     audio: true,
     video: { facingMode: "user" },
@@ -104,6 +105,7 @@ const Broadcast = () => {
       let response = await axios.post(`/api/broadcasters/new/${broadcaster}`, {
         username: name,
       });
+      setBroadcastLaunched(true)
       let broadcasterData = response.data.payload;
       socket.emit("new-broadcaster", broadcasterData);
       return broadcasterData;
@@ -152,6 +154,7 @@ const Broadcast = () => {
           Connect
         </button>
         <button
+          disabled={broadcastLaunched ? true : false}
           className="broadcast__button"
           onClick={(e) => (!name ? e.preventDefault : launchBroadcast())}
         >
