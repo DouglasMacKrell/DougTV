@@ -15,7 +15,7 @@ body {
 .watch__main-container {
   text-align: center;
   background-color: skyblue;
-  height: 100vh;
+  min-height: 100vh;
     background-position: center;
   background-attachment: fixed;
   background-size: cover;
