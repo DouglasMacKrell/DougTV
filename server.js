@@ -68,7 +68,7 @@ io.sockets.on("connection", (socket) => {
   });
   
   socket.on("watcher-disconnect", () => {
-    socket.emit("disconnectPeer")
+    socket.emit("disconnectPeer", socket.id)
   })
 
   socket.on("new message", (data) => {

@@ -179,7 +179,7 @@ const Broadcast = () => {
           click the START BROADCAST button!
         </p>
         <p>
-          When you're done with your broadcast, click DISCONNECT to delete and
+          When you're done with your broadcast, click END BROADCAST to delete and
           remove your stream from public view!
         </p>
         <p>
