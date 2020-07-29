@@ -164,7 +164,7 @@ const Broadcast = () => {
           className="broadcast__button"
           onClick={() => disconnectBroadcaster()}
         >
-          END BROADCAST
+          End Broadcast
         </button>
         <h3>Viewers: {numberOfViewers}</h3>
         <p>
