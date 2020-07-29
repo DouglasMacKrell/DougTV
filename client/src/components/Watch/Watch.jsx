@@ -51,13 +51,18 @@ const Watch = () => {
   }, [socket]);
 
   useEffect(() => {
-    socket.on("Peer", () => {
+    socket.on("disconnectPeer", () => {
       peerConnection.close();
     });
+  }, [socket]);
+
+  useEffect(() => {
     window.onunload = window.onbeforeunload = () => {
+      socket.emit("watcher-disconnect");
+      peerConnection.close();
       socket.close();
     };
-  }, [socket]);
+  }, [window]);
 
   const handleWatcher = () => {
     socket.emit("watcher", broadcasterId);

@@ -64,6 +64,7 @@ const Broadcast = () => {
         .then(() => {
           socket.emit("offer", id, peerConnection.localDescription);
         });
+      setNumberOfViewers(Object.keys(peerConnections).length);
     });
   }, [socket]);
 
@@ -75,22 +76,24 @@ const Broadcast = () => {
 
   useEffect(() => {
     socket.on("candidate", (id, candidate) => {
-      let updatedViewersNum = numberOfViewers + 1;
-      setNumberOfViewers(updatedViewersNum);
       peerConnections[id].addIceCandidate(new RTCIceCandidate(candidate));
     });
   }, [socket]);
 
   useEffect(() => {
     socket.on("disconnectPeer", (id) => {
-      setNumberOfViewers(numberOfViewers - 1);
       peerConnections[id].close();
       delete peerConnections[id];
+      setNumberOfViewers(Object.keys(peerConnections).length);
     });
+  }, [socket]);
+
+  useEffect(() => {
     window.onunload = window.onbeforeunload = () => {
+      disconnectBroadcaster();
       socket.close();
     };
-  }, [socket, window]);
+  }, [window]);
 
   const handleCanPlay = () => {
     videoRef.current.play();
@@ -105,7 +108,7 @@ const Broadcast = () => {
       let response = await axios.post(`/api/broadcasters/new/${broadcaster}`, {
         username: name,
       });
-      setBroadcastLaunched(true)
+      setBroadcastLaunched(true);
       let broadcasterData = response.data.payload;
       socket.emit("new-broadcaster", broadcasterData);
       return broadcasterData;
