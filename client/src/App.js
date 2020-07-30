@@ -5,7 +5,7 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 import Join from "./components/Join/Join";
 import Broadcast from "./components/Broadcast/Broadcast";
 import Watch from "./components/Watch/Watch";
-import Social from "./components/Social/Social"
+import Social from "./components/Social/DougTV-Social.png"
 
 const App = () => {
   return (
