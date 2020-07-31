@@ -26,14 +26,14 @@ Users are able to:
 
 - Search for active streams and quickly know if there are no active streams currently available
 - Launch a new Broadcast by
-- Entering a publicly visible display name
-- Clicking _Connect_ to form stable connection
-- Clicking _Start Broadcast_ to make the stream publicly visible on the home page
+ - Entering a publicly visible display name
+ - Clicking _Connect_ to form stable connection
+ - Clicking _Start Broadcast_ to make the stream publicly visible on the home page
 - End a Broadcast by
-- Clicking _End Broadcast_
+ - Clicking _End Broadcast_
 - Watch a Broadcast by
-- Clicking a link to an active stream found on the Home Page
-- Clicking _Connect_ on the Watch Page
+ - Clicking a link to an active stream found on the Home Page
+ - Clicking _Connect_ on the Watch Page
 
 ## Future Features
 
