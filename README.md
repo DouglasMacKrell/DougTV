@@ -86,16 +86,45 @@ You can check for these dependencies with `node -v` and `psql -v`. If your shell
 
          cd ..
          psql -f seed.sql
-        > [Make sure PostgreSQL is running!](https://www.google.com/search?q=make+sure+postgres+is+running&oq=make+sure+postf&aqs=chrome.1.69i57j0l5.5280j1j7&client=ubuntu&sourceid=chrome&ie=UTF-8)
+         
+   [Make sure PostgreSQL is running!](https://www.google.com/search?q=make+sure+postgres+is+running&oq=make+sure+postf&aqs=chrome.1.69i57j0l5.5280j1j7&client=ubuntu&sourceid=chrome&ie=UTF-8)
 
-  5. Change the 
+  5. To launch the Node/Express server, inside the root folder run: 
+
+          npm start
+
+  6. Before you can launch the React App, you must target the ENDPOINT of the socket.io server within the three files that use this connection. In the `client` => `src` => `components` folder, open the `Broadcast.jsx` file within the `Broadcast` folder. 
+
+   On line 28, change
+
+          const ENDPOINT = "https://dougtv.herokuapp.com/";
+   
+   to
+
+          const ENDPOINT = "http://127.0.0.1:4004";
+
+  7. Next, from the `components` folder, open `Join.jsx` within the `Join` folder.
+
+   On line 13, change
+
+          const ENDPOINT = "https://dougtv.herokuapp.com/";
+   
+   to
+
+          const ENDPOINT = "http://127.0.0.1:4004";
+          
+  8. Finally, from the `components` folder, open `Watch.jsx` within the `Watch` folder.
+
+  On line 18, change
+
+          const ENDPOINT = "https://dougtv.herokuapp.com/";
+   
+   to
+
+          const ENDPOINT = "http://127.0.0.1:4004";
   
-  To launch the Node/Express server, inside the root folder run: 
+  9. To launch the React App, inside the `client` folder, and preferably in another terminal window run: 
 
           npm start
 
-  6. To launch the React App, inside the `client` folder, and preferably in another terminal window run: 
-
-          npm start
-
-  7. A new browser tab should have been opened and the App should be running. If that is not the case check the terminals output for errors, if you are unable to troubleshoot the problem, I would be happy to address issues so open [one](/issues)
+  10. A new browser tab should have been opened and the App should be running. If that is not the case check the terminals output for errors, if you are unable to troubleshoot the problem, I would be happy to address issues so open [one](/issues)
