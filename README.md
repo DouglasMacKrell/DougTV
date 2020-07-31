@@ -13,55 +13,58 @@ Built with React.js with Hooks, Node.js with Express, and PostgreSQL. The video 
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=MhrdFbG6gCU" target="_blank"><img src="http://img.youtube.com/vi/MhrdFbG6gCU/0.jpg" 
 alt="Video Walkthrough Of DougTV" width="240" height="180" border="10" /></a>
 
-- [Video Walkthrough Of DougTV](https://youtu.be/MhrdFbG6gCU)
+* [Video Walkthrough Of DougTV](https://youtu.be/MhrdFbG6gCU)
 
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=fTE690MjbcA" target="_blank"><img src="http://img.youtube.com/vi/fTE690MjbcA/0.jpg" 
 alt="Video Walkthrough Of DougTV" width="240" height="180" border="10" /></a>
 
-- [Edge Case Fix For DougTV](https://youtu.be/fTE690MjbcA)
+* [Edge Case Fix For DougTV](https://youtu.be/fTE690MjbcA)
 
 ## Features
 
 Users are able to:
 
 * Search for active streams and quickly know if there are no active streams currently available
+
 * Launch a new Broadcast by
- * Entering a publicly visible display name
- * Clicking _Connect_ to form stable connection
- * Clicking _Start Broadcast_ to make the stream publicly visible on the home page
+  * Entering a publicly visible display name
+  * Clicking _Connect_ to form stable connection
+  * Clicking _Start Broadcast_ to make the stream publicly visible on the home page
+
 * End a Broadcast by
- * Clicking _End Broadcast_
+  * Clicking _End Broadcast_
+
 * Watch a Broadcast by
- * Clicking a link to an active stream found on the Home Page
- * Clicking _Connect_ on the Watch Page
+  * Clicking a link to an active stream found on the Home Page
+  * Clicking _Connect_ on the Watch Page
 
 ## Future Features
 
-- Live text chat between Broadcaster and Watchers facilitated by socket.io
-- Quick share link to the Watch Page listed directly on the Broadcast Page for broadcasters to quickly share on social media when they go live
-- Allowing Broadcasters to reconnect to a Broadcast they launch through localstorage
-- Secure and encrypted user accounts
+* Live text chat between Broadcaster and Watchers facilitated by socket.io
+* Quick share link to the Watch Page listed directly on the Broadcast Page for broadcasters to quickly share on social media when they go live
+* Allowing Broadcasters to reconnect to a Broadcast they launch through localstorage
+* Secure and encrypted user accounts
 
 ## Technical Milestones
 
-- This Full Stack Web App was created as both a tech demo and steppingstone in learning and utilizing WebRTC to launch a one-to-many Video Broadcast
-- Lessons learned in creating DougTV were used in the creation of my award winning Pursuit 2020 Capstone Project, [Pantry Party](https://www.pantry-party.com/)
-- Understanding what the RTCPeerConnection is and how it can be properly shared behind NAT Servers
-- Learning how to collect the ICE credentials from two or more potential connecting peers
-- Disabling audio on the Broadcast's video display so a broadcaster isn't bothered by a echo while presenting
-- Having an accurate active viewer count displayed on the Broadcast page
-- Disabling the _Start Broadcast_ button once a connection has been made and a stream is publicly displayed on the Home Page
+* This Full Stack Web App was created as both a tech demo and steppingstone in learning and utilizing WebRTC to launch a one-to-many Video Broadcast
+* Lessons learned in creating DougTV were used in the creation of my award winning Pursuit 2020 Capstone Project, [Pantry Party](https://www.pantry-party.com/)
+* Understanding what the RTCPeerConnection is and how it can be properly shared behind NAT Servers
+* Learning how to collect the ICE credentials from two or more potential connecting peers
+* Disabling audio on the Broadcast's video display so a broadcaster isn't bothered by a echo while presenting
+* Having an accurate active viewer count displayed on the Broadcast page
+* Disabling the _Start Broadcast_ button once a connection has been made and a stream is publicly displayed on the Home Page
 
 ## Technologies Used
 
-- **Node.js & Express.js** For the HTTP backend server
-- **React.js** For the front-end/client interface of our app
-- **PostgreSQL** As our relation database management system
-- **pg-promise** For interfacing with our database in our backend code
-- **socket.io** For allowing real time real time interactions between two or more peers
-- **WebRTC** The RTCPeerConnection is the data stream shared between peers
-- **STUN Server** A Google provided simple server that shares the ICE credentials (the public facing IP address) to bypass the NAT Server and permit the RTCPeerConnection
-- **CSS3**
+* **Node.js & Express.js** For the HTTP backend server
+* **React.js** For the front-end/client interface of our app
+* **PostgreSQL** As our relation database management system
+* **pg-promise** For interfacing with our database in our backend code
+* **socket.io** For allowing real time real time interactions between two or more peers
+* **WebRTC** The RTCPeerConnection is the data stream shared between peers
+* **STUN Server** A Google provided simple server that shares the ICE credentials (the public facing IP address) to bypass the NAT Server and permit the RTCPeerConnection
+* **CSS3**
 
 ## Local Setup
 
@@ -87,18 +90,18 @@ You can check for these dependencies with `node -v` and `psql -v`. If your shell
 
 Change
 
-         DROP TABLE IF exists broadcasters;
+   DROP TABLE IF exists broadcasters;
 
 to
 
-         DROP DATABASE IF EXISTS dougtv;
-         CREATE DATABASE dougtv;
-         \c dougtv;
+   DROP DATABASE IF EXISTS dougtv;
+   CREATE DATABASE dougtv;
+   \c dougtv;
 
 Then seed the new database from the root folder:
 
-         cd ..
-         psql -f seed.sql
+   cd ..
+   psql -f seed.sql
 
 > [Make sure PostgreSQL is running!](https://www.google.com/search?q=make+sure+postgres+is+running&oq=make+sure+postf&aqs=chrome.1.69i57j0l5.5280j1j7&client=ubuntu&sourceid=chrome&ie=UTF-8)
 
@@ -110,31 +113,31 @@ Then seed the new database from the root folder:
 
 On line 28, change
 
-         const ENDPOINT = "https://dougtv.herokuapp.com/";
+   const ENDPOINT = "https://dougtv.herokuapp.com/";
 
 to
 
-         const ENDPOINT = "http://127.0.0.1:4004";
+   const ENDPOINT = "http://127.0.0.1:4004";
 
 7. Next, from the `components` folder, open `Join.jsx` within the `Join` folder.
 
 On line 13, change
 
-         const ENDPOINT = "https://dougtv.herokuapp.com/";
+   const ENDPOINT = "https://dougtv.herokuapp.com/";
 
 to
 
-         const ENDPOINT = "http://127.0.0.1:4004";
+   const ENDPOINT = "http://127.0.0.1:4004";
 
 8. Finally, from the `components` folder, open `Watch.jsx` within the `Watch` folder.
 
 On line 18, change
 
-         const ENDPOINT = "https://dougtv.herokuapp.com/";
+   const ENDPOINT = "https://dougtv.herokuapp.com/";
 
 to
 
-         const ENDPOINT = "http://127.0.0.1:4004";
+   const ENDPOINT = "http://127.0.0.1:4004";
 
 9. To launch the React App, inside the `client` folder, and preferably in another terminal window run:
 
