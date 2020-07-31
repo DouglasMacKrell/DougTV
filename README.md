@@ -27,16 +27,16 @@ Users are able to:
 * Search for active streams and quickly know if there are no active streams currently available
 
 * Launch a new Broadcast by  
-  * Entering a publicly visible display name  
-  * Clicking _Connect_ to form stable connection  
-  * Clicking _Start Broadcast_ to make the stream publicly visible on the home page
+ * Entering a publicly visible display name  
+ * Clicking _Connect_ to form stable connection  
+ * Clicking _Start Broadcast_ to make the stream publicly visible on the home page
 
 * End a Broadcast by  
-  * Clicking _End Broadcast_
+ * Clicking _End Broadcast_
 
 * Watch a Broadcast by  
-  * Clicking a link to an active stream found on the Home Page  
-  * Clicking _Connect_ on the Watch Page
+ * Clicking a link to an active stream found on the Home Page  
+ * Clicking _Connect_ on the Watch Page
 
 ## Future Features
 
@@ -76,63 +76,63 @@ You can check for these dependencies with `node -v` and `psql -v`. If your shell
 
 1. Clone this repo into a folder of your choice:
 
-   `git clone https://github.com/DouglasMacKrell/DougTV.git`
+       `git clone https://github.com/DouglasMacKrell/DougTV.git`
 
 2. Install dependencies for the Node/Express Server:
 
-   `npm install`
+       `npm install`
 
 3. Install dependencies the React App (`client` folder):
 
-   `cd client && npm install`
+       `cd client && npm install`
 
 4. Create database and seed sample data. While inside the root directory, open the `seed.sql` file and:
 
-Change  
-   `DROP TABLE IF exists broadcasters;`
+ Change  
+       `DROP TABLE IF exists broadcasters;`
 
-to  
-   `DROP DATABASE IF EXISTS dougtv;`
-   `CREATE DATABASE dougtv;`
-   `\c dougtv;`
+ to  
+       `DROP DATABASE IF EXISTS dougtv;`
+       `CREATE DATABASE dougtv;`
+       `\c dougtv;`
 
 Then seed the new database from the root folder:  
-   `cd ..`
-   `psql -f seed.sql`
+       `cd ..`
+       `psql -f seed.sql`
 
 > [Make sure PostgreSQL is running!](https://www.google.com/search?q=make+sure+postgres+is+running&oq=make+sure+postf&aqs=chrome.1.69i57j0l5.5280j1j7&client=ubuntu&sourceid=chrome&ie=UTF-8)
 
 5. To launch the Node/Express server, inside the root folder run:
 
-   `npm start`
+       `npm start`
 
 6. Before you can launch the React App, you must target the ENDPOINT of the socket.io server within the three files that use this connection. In the `client` => `src` => `components` folder, open the `Broadcast.jsx` file within the `Broadcast` folder.
 
-On line 28, change  
-   `const ENDPOINT = "https://dougtv.herokuapp.com/";`
+ On line 28, change  
+       `const ENDPOINT = "https://dougtv.herokuapp.com/";`
 
-to  
-   `const ENDPOINT = "http://127.0.0.1:4004";`
+ to  
+       `const ENDPOINT = "http://127.0.0.1:4004";`
 
 7. Next, from the `components` folder, open `Join.jsx` within the `Join` folder.
 
-On line 13, change  
-   `const ENDPOINT = "https://dougtv.herokuapp.com/";`
+ On line 13, change  
+       `const ENDPOINT = "https://dougtv.herokuapp.com/";`
 
-to  
-   `const ENDPOINT = "http://127.0.0.1:4004";`
+ to  
+       `const ENDPOINT = "http://127.0.0.1:4004";`
 
 8. Finally, from the `components` folder, open `Watch.jsx` within the `Watch` folder.
 
-On line 18, change  
-   `const ENDPOINT = "https://dougtv.herokuapp.com/";`
+ On line 18, change  
+       `const ENDPOINT = "https://dougtv.herokuapp.com/";`
 
-to  
-   `const ENDPOINT = "http://127.0.0.1:4004";`
+ to  
+       `const ENDPOINT = "http://127.0.0.1:4004";`
 
 9. To launch the React App, inside the `client` folder, and preferably in another terminal window run:
 
-   `npm start`
+       `npm start`
 
 10. A new browser tab should have been opened and the App should be running. If that is not the case check the terminals output for errors, if you are unable to troubleshoot the problem, I would be happy to address issues so open [one](/issues)
 
