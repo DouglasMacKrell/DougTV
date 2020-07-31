@@ -70,7 +70,7 @@ You can check for these dependencies with `node -v` and `psql -v`. If your shell
 
          cd client && npm install
 
-  4. Create database and seed sample data while being in the root directory by first altering the seed.sql file:
+  4. Create database and seed sample data. While inside the root directory, open the `seed.sql` file and:
    
    Change
 
@@ -87,7 +87,7 @@ You can check for these dependencies with `node -v` and `psql -v`. If your shell
          cd ..
          psql -f seed.sql
          
-   [Make sure PostgreSQL is running!](https://www.google.com/search?q=make+sure+postgres+is+running&oq=make+sure+postf&aqs=chrome.1.69i57j0l5.5280j1j7&client=ubuntu&sourceid=chrome&ie=UTF-8)
+   >[Make sure PostgreSQL is running!](https://www.google.com/search?q=make+sure+postgres+is+running&oq=make+sure+postf&aqs=chrome.1.69i57j0l5.5280j1j7&client=ubuntu&sourceid=chrome&ie=UTF-8)
 
   5. To launch the Node/Express server, inside the root folder run: 
 
