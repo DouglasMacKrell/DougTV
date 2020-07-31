@@ -8,6 +8,18 @@ Built with React.js with Hooks, Node.js with Express, and PostgreSQL. The video 
 
 ![DougTV Logo and Broadcast Page](https://dougtv.herokuapp.com/static/media/DougTV-Social.82bcc0c1.png)
 
+## Videos
+
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=MhrdFbG6gCU" target="_blank"><img src="http://img.youtube.com/vi/MhrdFbG6gCU/0.jpg" 
+alt="Video Walkthrough Of DougTV" width="240" height="180" border="10" /></a>
+
+- [Video Walkthrough Of DougTV](https://youtu.be/MhrdFbG6gCU)
+
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=fTE690MjbcA" target="_blank"><img src="http://img.youtube.com/vi/fTE690MjbcA/0.jpg" 
+alt="Video Walkthrough Of DougTV" width="240" height="180" border="10" /></a>
+
+- [Edge Case Fix For DougTV](https://youtu.be/fTE690MjbcA)
+
 ## Features
 
 Users are able to:
@@ -88,7 +100,6 @@ Then seed the new database from the root folder:
          cd ..
          psql -f seed.sql
 
-
 > [Make sure PostgreSQL is running!](https://www.google.com/search?q=make+sure+postgres+is+running&oq=make+sure+postf&aqs=chrome.1.69i57j0l5.5280j1j7&client=ubuntu&sourceid=chrome&ie=UTF-8)
 
 5. To launch the Node/Express server, inside the root folder run:
@@ -115,7 +126,6 @@ to
 
          const ENDPOINT = "http://127.0.0.1:4004";
 
-
 8. Finally, from the `components` folder, open `Watch.jsx` within the `Watch` folder.
 
 On line 18, change
@@ -132,12 +142,15 @@ to
 
 10. A new browser tab should have been opened and the App should be running. If that is not the case check the terminals output for errors, if you are unable to troubleshoot the problem, I would be happy to address issues so open [one](/issues)
 
-  
+---
+
 <details>
     <summary>
         Before you leave, please take note:
     </summary>
 
-You're the best! Thank you for visiting! Please give this project a star and be sure to check out my [YouTube Channel](https://youtube.com/BigMacKrell)!
+You're the best! Thank you for visiting!
+
+Please give this project a star and be sure to check out my [YouTube Channel](https://youtube.com/BigMacKrell)!
 
 </details>
