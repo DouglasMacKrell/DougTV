@@ -85,15 +85,15 @@ You can check for these dependencies with `node -v` and `psql -v`. If your shell
 
 4. Create database and seed sample data. While inside the root directory, open the `seed.sql` file and:
 
-  - Change  
+    - Change  
          `DROP TABLE IF exists broadcasters;`
 
-  - to  
+    - to  
          `DROP DATABASE IF EXISTS dougtv;`  
          `CREATE DATABASE dougtv;`  
          `\c dougtv;`
 
-  - Then seed the new database from the root folder:  
+    - Then seed the new database from the root folder:  
        `cd ..`  
        `psql -f seed.sql`
 
@@ -105,26 +105,26 @@ You can check for these dependencies with `node -v` and `psql -v`. If your shell
 
 6. Before you can launch the React App, you must target the ENDPOINT of the socket.io server within the three files that use this connection. In the `client` => `src` => `components` folder, open the `Broadcast.jsx` file within the `Broadcast` folder.
 
-  - On line 28, change  
+    - On line 28, change  
          `const ENDPOINT = "https://dougtv.herokuapp.com/";`
 
-  - to  
+    - to  
          `const ENDPOINT = "http://127.0.0.1:4004";`
 
 7. Next, from the `components` folder, open `Join.jsx` within the `Join` folder.
 
-  - On line 13, change  
+    - On line 13, change  
          `const ENDPOINT = "https://dougtv.herokuapp.com/";`
 
-  - to  
+    - to  
          `const ENDPOINT = "http://127.0.0.1:4004";`
 
 8. Finally, from the `components` folder, open `Watch.jsx` within the `Watch` folder.
 
-  - On line 18, change  
+    - On line 18, change  
          `const ENDPOINT = "https://dougtv.herokuapp.com/";`
 
-  - to  
+    - to  
          `const ENDPOINT = "http://127.0.0.1:4004";`
 
 9. To launch the React App, inside the `client` folder, and preferably in another terminal window run:
