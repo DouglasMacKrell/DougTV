@@ -2,7 +2,7 @@
 
 ### Live @ [dougtv.herokuapp.com](https://dougtv.herokuapp.com/)
 
-**DougTV** is a One-To-Many Video Broadcast Full-Stack Web App that allows users to quickly launch a broadcast and be publicly seen and heard by an audience anywhere in the world!
+**DougTV** is a One-To-Many Video Broadcast Full-Stack Web App that allows users to quickly launch a live broadcast video stream and be publicly seen and heard by an audience anywhere in the world!
 
 Built with React.js with Hooks, Node.js with Express, and PostgreSQL. The video broadcast feature is facilitated by socket.io and a WebRTC RTCPeerConnection.
 
