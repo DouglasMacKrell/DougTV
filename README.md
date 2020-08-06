@@ -2,7 +2,7 @@
 
 ### Live @ [dougtv.herokuapp.com](https://dougtv.herokuapp.com/)
 
-[![Heroku](https://heroku-badge.herokuapp.com/?app=dougtv)]
+[![Heroku](https://heroku-badge.herokuapp.com/?app=dougtv)](https://dougtv.herokuapp.com/)
 
 **DougTV** is a One-To-Many Video Broadcast Full-Stack Web App that allows users to quickly launch a live broadcast video stream and be publicly seen and heard by an audience anywhere in the world!
 
