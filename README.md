@@ -8,7 +8,7 @@
 
 Built with React.js with Hooks, Node.js with Express, and PostgreSQL. The video broadcast feature is facilitated by socket.io and a WebRTC RTCPeerConnection.
 
-![DougTV Logo and Broadcast Page](https://dougtv.herokuapp.com/DougTV.gif)
+![DougTV Site Walkthrough](https://dougtv.herokuapp.com/DougTV.gif)
 
 ## Videos
 
@@ -136,6 +136,14 @@ You can check for these dependencies with `node -v` and `psql -v`. If your shell
 10. A new browser tab should have been opened and the App should be running. If that is not the case check the terminals output for errors, if you are unable to troubleshoot the problem, I would be happy to address issues so open [one](/issues)
 
 ---
+
+### Please check out my other work at [DouglasMacKrell.com](https://douglasmackrell.com)
+
+---
+
+
+![DougTV Social Media](https://dougtv.herokuapp.com/DougTV-Social.png)
+
 ---
 
 <details>
