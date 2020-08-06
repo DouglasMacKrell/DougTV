@@ -8,7 +8,7 @@
 
 Built with React.js with Hooks, Node.js with Express, and PostgreSQL. The video broadcast feature is facilitated by socket.io and a WebRTC RTCPeerConnection.
 
-![DougTV Logo and Broadcast Page](https://dougtv.herokuapp.com/DougTV-Social.png)
+![DougTV Logo and Broadcast Page](https://dougtv.herokuapp.com/DougTV.gif)
 
 ## Videos
 
