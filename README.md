@@ -142,7 +142,7 @@ You can check for these dependencies with `node -v` and `psql -v`. If your shell
 ---
 
 
-![DougTV Social Media](https://dougtv.herokuapp.com/DougTV-Social.png)
+[![DougTV Social Media](https://dougtv.herokuapp.com/DougTV-Social.png)](https://dougtv.herokuapp.com)
 
 ---
 
