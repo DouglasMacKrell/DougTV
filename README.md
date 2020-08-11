@@ -57,9 +57,9 @@ Users are able to:
 ## Technologies Used
 
 * **Node.js & Express.js** For the HTTP backend server
-* **React.js** For the front-end/client interface of our app
-* **PostgreSQL** As our relation database management system
-* **pg-promise** For interfacing with our database in our backend code
+* **React.js** For the front-end/client interface of my app
+* **PostgreSQL** As my relation database management system
+* **pg-promise** For interfacing with my database in my backend code
 * **socket.io** For allowing real time real time interactions between two or more peers
 * **WebRTC** The RTCPeerConnection is the data stream shared between peers
 * **STUN Server** A Google provided simple server that shares the ICE credentials (the public facing IP address) to bypass the NAT Server and permit the RTCPeerConnection
@@ -69,7 +69,7 @@ Users are able to:
 
 **NOTE: This repo has been configured for deployment on Heroku, but can be run locally after a few adjustments.**
 
-You must have installed [Node.js](https://nodejs.org) as well as [PostgreSQL](https://www.postgresql.org/) in your computer.
+You must install [Node.js](https://nodejs.org) as well as [PostgreSQL](https://www.postgresql.org/) in your computer.
 
 You can check for these dependencies with `node -v` and `psql -v`. If your shell/terminal doesn't complain and you see version numbers you are good to go.
 
@@ -81,7 +81,7 @@ You can check for these dependencies with `node -v` and `psql -v`. If your shell
 
        `npm install`
 
-3. Install dependencies the React App (`client` folder):
+3. Install dependencies for the React App (`client` folder):
 
        `cd client && npm install`
 
@@ -141,10 +141,9 @@ You can check for these dependencies with `node -v` and `psql -v`. If your shell
 
 ---
 
-
 [![DougTV Social Media](https://dougtv.herokuapp.com/DougTV-Social.png)](https://dougtv.herokuapp.com)
 
----
+** **
 
 <details>
     <summary>
