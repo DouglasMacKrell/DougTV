@@ -39,7 +39,7 @@ const Join = () => {
         <h1 className="join__header">Join A Stream or Start Your Own!</h1>
         <h2>
           Find out more about Douglas MacKrell at{" "}
-          <a href="https://douglasmackrell.com">douglasmackrell.com</a>
+          <a target="__blank" href="https://douglasmackrell.com">douglasmackrell.com</a>
         </h2>
         <Link to={`/broadcast`}>
           <button className={"join__button mt-20"} type="submit">
