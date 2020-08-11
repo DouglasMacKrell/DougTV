@@ -88,3 +88,8 @@ body {
     font-size: 20px;
     font-weight: bold;
 }
+
+a:hover,
+a:active {
+  color: orange;
+}
