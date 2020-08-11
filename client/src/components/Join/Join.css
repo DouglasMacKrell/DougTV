@@ -33,10 +33,15 @@ body {
 .join__logo-container {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+}
+
+.join__logo-container p {
+  padding-top: 10px;
 }
 
 .site-logo {
-    width: 40%;
+    width: 100%;
 }
 
 .join__header {
