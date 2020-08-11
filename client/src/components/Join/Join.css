@@ -30,6 +30,11 @@ body {
   justify-content: space-around;
 }
 
+.join__logo-container {
+  display: flex;
+  flex-direction: column;
+}
+
 .site-logo {
     width: 40%;
 }
