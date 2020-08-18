@@ -130,22 +130,31 @@ You can check for these dependencies with `node -v` and `psql -v`. If your shell
 7. Next, from the `components` folder, open `Join.jsx` within the `Join` folder.
 
     - On line 13, change  
-         `const ENDPOINT = "https://dougtv.herokuapp.com/";`
+    ```
+         const ENDPOINT = "https://dougtv.herokuapp.com/";
+    ```
 
     - to  
-         `const ENDPOINT = "http://127.0.0.1:4004";`
+    ```
+         const ENDPOINT = "http://127.0.0.1:4004";
+    ```
 
 8. Finally, from the `components` folder, open `Watch.jsx` within the `Watch` folder.
 
     - On line 18, change  
-         `const ENDPOINT = "https://dougtv.herokuapp.com/";`
+    ```
+         const ENDPOINT = "https://dougtv.herokuapp.com/";
+    ```
 
     - to  
-         `const ENDPOINT = "http://127.0.0.1:4004";`
+    ```
+         const ENDPOINT = "http://127.0.0.1:4004";
+    ```
 
 9. To launch the React App, inside the `client` folder, and preferably in another terminal window run:
-
-       `npm start`
+```
+       npm start
+```
 
 10. A new browser tab should have been opened and the App should be running. If that is not the case check the terminals output for errors, if you are unable to troubleshoot the problem, I would be happy to address issues so open [one](/issues)
 
