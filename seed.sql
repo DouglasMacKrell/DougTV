@@ -1,3 +1,7 @@
+-- DROP DATABASE IF exists dougtv;
+-- CREATE DATABASE dougtv;
+-- \c dougtv;
+
 DROP TABLE IF exists broadcasters; 
 CREATE TABLE broadcasters (
     id SERIAL PRIMARY KEY,

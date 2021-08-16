@@ -62,7 +62,7 @@ const Watch = () => {
       peerConnection.close();
       socket.close();
     };
-  }, [window]);
+  }, [window, socket]);
 
   const handleWatcher = () => {
     socket.emit("watcher", broadcasterId);

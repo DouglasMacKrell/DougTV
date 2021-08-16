@@ -62,12 +62,17 @@ io.sockets.on("connection", (socket) => {
     console.log("candidate", message);
   });
 
+  socket.on("close", () => {
+    console.log("closed socket")
+  })
+
   socket.on("new-broadcaster", (broadcaster) => {
     socket.broadcast.emit("active-broadcaster", broadcaster);
     console.log("active-broadcaster emitted");
   });
   
   socket.on("watcher-disconnect", () => {
+    console.log("watcher disconnected")
     socket.emit("disconnectPeer", socket.id)
   })
 
