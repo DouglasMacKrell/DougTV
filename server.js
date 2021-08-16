@@ -4,8 +4,6 @@ const cookieParser = require("cookie-parser");
 const path = require("path");
 const logger = require("morgan");
 
-process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0";
-
 var cors = require("cors");
 app.use(cors());
 
