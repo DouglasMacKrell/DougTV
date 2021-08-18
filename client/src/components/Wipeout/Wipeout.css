@@ -12,7 +12,7 @@ body {
   padding: 0;
 }
 
-.broadcast__main-container {
+.wipeout__main-container {
   text-align: center;
   background-color: skyblue;
   min-height: 100vh;
@@ -26,28 +26,12 @@ body {
   padding: 0;
 }
 
-.broadcast__sub-container {
-    padding: 10px;
+.wipeout__sub-container {
+    padding: 25%;
     padding-bottom: 25px;
 }
 
-.broadcast__header {
-  font-family: "Rock Salt", cursive;
-}
-
-.video {
-    border: 10px purple solid;
-    border-radius: 10px;
-}
-
-.name-input input {
-    margin-top: 10px;
-    width: 250px;
-    height: 25px;
-    font-size: 1rem;
-}
-
-.broadcast__button {
+.wipeout__button {
   font-size: 1.5rem;
   background-color: purple;
   color: white;
@@ -57,7 +41,7 @@ body {
   box-shadow: 2px 2px 7px rgba(0, 0, 0, 0.5);
 }
 
-.broadcast__button:hover {
+.wipeout__button:hover {
   font-size: 1.5rem;
   background-color: orange;
   color: black;
@@ -67,7 +51,7 @@ body {
   box-shadow: 2px 2px 7px rgba(0, 0, 0, 0.5);
 }
 
-.broadcast__button:active {
+.wipeout__button:active {
   font-size: 1.5rem;
   background-color: rgba(255, 166, 0, 0.726);
   color: black;
@@ -77,6 +61,6 @@ body {
   box-shadow: 1px 1px 7px rgba(0, 0, 0, 0.5);
 }
 
-.broadcast__button:focus {
+.wipeout__button:focus {
     outline: none;
 }

@@ -37,6 +37,11 @@ Users are able to:
   * Clicking a link to an active stream found on the Home Page  
   * Clicking _Connect_ on the Watch Page
 
+A Manager is able to:
+
+* Delete all disconnected Broadcasters who did not properly End Broadcast by
+  * Clicking _Clear Database_ on the top secret Wipeout page
+
 ## Future Features
 
 * Live text chat between Broadcaster and Watchers facilitated by socket.io
