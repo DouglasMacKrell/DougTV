@@ -93,4 +93,23 @@ router.patch("/:socket_id", async (req, res, next) => {
     }
 });
 
+router.delete("/wipeout", async (req, res, next) => {
+  try {
+    const deletedBroadcasters = await broadcastQueries.deleteAll();
+    console.log(deletedBroadcasters);
+    res.json({
+      status: "success",
+      message: "All broadcasters have been deleted!",
+      payload: deletedBroadcasters,
+    });
+  } catch (err) {
+    res.status(500).json({
+      status: "failure",
+      message: "Oops! All Errors!!",
+      payload: null,
+    });
+    throw err;
+  }
+});
+
 module.exports = router;

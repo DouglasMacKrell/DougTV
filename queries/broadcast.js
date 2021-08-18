@@ -48,10 +48,20 @@ const deactivateBroadcaster = async (broadcaster) => {
     }
 }
 
+//DELETE ALL
+const deleteAll = async () => {
+    try {
+        return await db.any(`DELETE FROM broadcasters RETURNING *;`)
+    } catch (err) {
+        throw (err)
+    }
+}
+
 /* EXPORT */
 module.exports = {
     getBroadcasterById,
     getAllBroadcasters,
     createBroadcaster,
-    deactivateBroadcaster
+    deactivateBroadcaster,
+    deleteAll
 }
