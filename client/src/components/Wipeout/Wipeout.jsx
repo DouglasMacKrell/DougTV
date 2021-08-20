@@ -7,7 +7,6 @@ const Wipeout = () => {
     const deleteAllBroadcasters = async () => {
         try {
             let deletedBroadcasters = await axios.delete('api/broadcasters/wipeout')
-            console.log(deletedBroadcasters.data.message)
             return deletedBroadcasters
         } catch (err) {
             throw err

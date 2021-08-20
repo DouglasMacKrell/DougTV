@@ -6,7 +6,6 @@ let broadcastQueries = require('../queries/broadcast')
 router.get("/active", async (req, res, next) => {
     try {
         const broadcasters = await broadcastQueries.getAllBroadcasters();
-        console.log(broadcasters)
         res.json({
             status: "success",
             message: "All active broadcasters retrieved!",
@@ -27,7 +26,6 @@ router.get("/:socket_id", async (req, res, next) => {
     try {
         const socketId = req.params.socket_id
         const broadcaster = await broadcastQueries.getBroadcasterById(socketId);
-        console.log(broadcaster)
         res.json({
             status: "success",
             message: `Broadcaster ${socketId} retrieved!`,
@@ -48,7 +46,6 @@ router.get("/:socket_id", async (req, res, next) => {
 router.post("/new/:socket_id", async (req, res, next) => {
     try {
         const socket_id = req.params.socket_id;
-        console.log(socket_id)
         const username = req.body.username;
         const response = await broadcastQueries.createBroadcaster({
             socket_id: socket_id,
@@ -96,7 +93,6 @@ router.patch("/:socket_id", async (req, res, next) => {
 router.delete("/wipeout", async (req, res, next) => {
   try {
     const deletedBroadcasters = await broadcastQueries.deleteAll();
-    console.log(deletedBroadcasters);
     res.json({
       status: "success",
       message: "All broadcasters have been deleted!",
