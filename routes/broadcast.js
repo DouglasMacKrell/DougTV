@@ -42,7 +42,7 @@ router.get("/:socket_id", async (req, res, next) => {
 });
 
 
-// createRecipe: create a new core recipe instance
+// launchBroadcast: create a broadcaster and add them to the database
 router.post("/new/:socket_id", async (req, res, next) => {
     try {
         const socket_id = req.params.socket_id;
