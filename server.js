@@ -4,6 +4,8 @@ const cookieParser = require("cookie-parser");
 const path = require("path");
 const logger = require("morgan");
 
+require("./cron_jobs/cron_job");
+
 var cors = require("cors");
 app.use(cors());
 
