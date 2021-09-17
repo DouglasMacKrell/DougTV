@@ -42,8 +42,13 @@ A Manager is able to:
 * Delete all disconnected Broadcasters who did not properly End Broadcast by
   * Clicking _Clear Database_ on the top secret Wipeout page
 
+A Cron Job has been set to:
+
+* Automatically delete all disconnected Broadcasters who did not properly End Broadcast every 24 hours
+
 ## Future Features
 
+* Delete Broadcaster on closed window/tab or unexpected user disconnect
 * Live text chat between Broadcaster and Watchers facilitated by socket.io
 * Quick share link to the Watch Page listed directly on the Broadcast Page for broadcasters to quickly share on social media when they go live
 * Allowing Broadcasters to reconnect to a Broadcast they launch through localstorage
