@@ -22,7 +22,7 @@
     "nodemon": "^2.0.12",
     "pg": "^8.7.1",
     "pg-promise": "^10.11.0",
-    "socket.io": "^2.4.1",
+    "socket.io": "^2.5.0",
     "socket.io-adapter-postgres": "^1.2.1"
   }
 }
